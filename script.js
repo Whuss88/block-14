@@ -29,13 +29,42 @@ for (let index = 0;index < numbers.length; index++){
 }
 
 const getMean = () => {
-  let mean = getSum() / numbers.length;
+  const mean = getSum() / numbers.length;
   return mean
 }
 
+const getMin = () => {
+  const min = Math.min(...numbers)
+  return min
+}
+
+const getMax = () => {
+  const max = Math.max(...numbers)
+  return max
+}
+
+const getRange = () => {
+  const range = getMax() - getMin()
+  return range
+}
+
+const getEvens = () => {
+  const evens = numbers.filter(num => num % 2 === 0)
+  return evens
+}
+
+const getOdds = () => {
+  const odds = numbers.filter(num => num % 2 !== 0)
+  return odds
+}
 
 
 // invoking functions
 console.log(`Length is`,getLength())
 console.log(`Sum is:`, getSum())
 console.log(`Mean is:`, getMean())
+console.log(`Min is:`, getMin())
+console.log(`Max is:`, getMax())
+console.log(`Range is:`, getRange())
+console.log(`Even numbers are:`, getEvens())
+console.log(`Odd numbers are:`, getOdds())
